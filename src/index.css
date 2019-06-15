@@ -5,9 +5,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg,lightblue 0%,blue 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#heading {
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.container {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  min-height: 80vh;
+}
+
+form label {
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+form,
+.messages {
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#btn {
+  max-width: 300px;
+  margin-left: 15rem;
+  margin-top: 1rem;
+  border-radius: 2rem;
+  color: black;
+  background-color: green;
+  border-color: green;
+}
+
+#res {
+  text-align: center;
+  font-size: 3rem;
+}
+
+
+

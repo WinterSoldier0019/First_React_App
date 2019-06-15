@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component,Fragment} from "react";
+import "./normalize.css"
+import "./skeleton.css"
+import Form from "./components/form"
+import Result from "./components/result"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+class App extends Component {
+  state = {
+    Amount: ""
+  }
+
+  loanInfo = (Principal,Rate,Time) => {
+    const si = (Principal*Rate*Time)/100;
+    const total = si + Principal;
+    this.setState({
+    Amount: Number(total)
+  })
+}
+
+render()
+{
+  return (<Fragment>
+    <h1 id="heading" className="u-full-width">Simple Interest Calculator</h1>
+    <div className="container">
+      <Form LoanInfo = {this.loanInfo}/>
+      <Result Res = {this.state.Amount}/>
     </div>
-  );
+  </Fragment>);
+}
 }
 
 export default App;
